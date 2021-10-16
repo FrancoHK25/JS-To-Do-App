@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <input id="title" value="HTML Test Title" placeholder="Name your List..."/>
+            <span class="color-picker">
+                <input id="header-color-picker" type="color"/>
+            </span>
+        </div>
+        <div class="task-list" id="task-list">
+            <div class="task">
+                <input class="task-checkbox" type="checkbox"/>
+                <label class="task-text">HTML Test task.</label>
+                <button class="task-delete">&times;</button>
+            </div>
+        </div>
+        <div class="new-task">
+            <input class="new-task-text" id="new-task-text" placeholder="Write a new task..."/>
+            <button class="new-task-add" id="new-task-add">&plus;</button>
+        </div>
+    </div>
+</body>
+</html>

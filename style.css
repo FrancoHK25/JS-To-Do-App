@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+
+    background: radial-gradient(white, darkgray);
+    color: white;
+    font-family: sans-serif;
+}
+
+.app-container {
+    display: grid;
+    grid-template-rows: 3rem auto 2.5rem;
+
+    min-height: 200px;
+    height: 100%;
+    max-height: 300px;
+
+    width: 300px;
+
+    background-color: rgb(58, 56, 61);
+    border-radius: 7%;
+    overflow: clip;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*--Title-----------------------------------------------------------------------*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 10px;
+    
+    background-color: black;
+}
+
+#title {
+    color: white;
+    background-color: transparent;
+    width: 90%;
+
+    border: none;
+
+    text-align: center;
+    text-shadow: 1px 1px 4px black;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+#title:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+}
+#title::placeholder {
+    text-shadow: none;
+}
+
+.color-picker {
+    width: 1rem;
+    height: 1rem;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px gray;
+
+    background-color: black;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.header:hover .color-picker {
+    opacity: 1;
+}
+
+#header-color-picker {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+/*--List Body--------------------------------------------------------------*/
+
+.task-list {
+    overflow-y: auto;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 2rem auto 1rem;
+    grid-auto-rows: auto;
+    align-items: baseline;
+    padding: 0 .5rem;
+}
+
+.task-checkbox {    
+    transform: scale(1.5);
+}
+
+.task-text {
+    word-wrap: break-word;
+}
+.completed {
+    text-decoration: line-through;
+}
+
+.task-delete {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    padding: 0;
+    cursor: pointer;
+
+    color: white;
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.5rem;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.task:hover .task-delete {
+    opacity: 1;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background-color: gray;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+}
+
+/*--New Task-------------------------------------------------------------------*/
+
+.new-task {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px 10px 10px;
+}
+
+.new-task-text {
+    color: white;
+    background-color: transparent;
+    width: 90%;
+
+    border: none;
+
+    /* transform: translateY(2rem);
+    transition: transform .5s ease-in-out; */
+}
+.new-task-text:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.new-task-add {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    border: none;
+
+    color: white;
+    background-color: #3297FD;
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* .new-task:hover .new-task-text {
+    transform: translateY(0);
+} */
